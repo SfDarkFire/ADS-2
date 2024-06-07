@@ -29,7 +29,7 @@ double calcItem(double x, uint16_t n) {
 double expn(double x, uint16_t count) {
   double result = 1.0;
   double term = 1.0;
-  for (int i = 1; i < count; i++) {
+  for (int i = 1; i <= count; i++) {
     term *= x / i;
     result += term;
   }
