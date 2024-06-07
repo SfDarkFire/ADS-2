@@ -3,11 +3,14 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-  while (n != 1) {
-    value *= value;
-    n--;
-  }
-  return value;
+  if (n == 0) {
+    return 1; // Любое число в степени 0 равно 1
+    }
+    double result = 1;
+    for (uint16_t i = 1; i <= n; ++i) {
+        result *= value;
+    }
+    return result;
 }
 
 uint64_t fact(uint16_t n) {
