@@ -25,14 +25,15 @@ double calcItem(double x, uint16_t n) {
   return pown(x, n) / fact(n);
 }
 
+
 double expn(double x, uint16_t count) {
-  double sum = 1.0;
+  double result = 1.0;
   double term = 1.0;
-  for (uint16_t i = 0; i < count; ++i) {
-    sum += term;
-    term *= x / (i + 1);
+  for (int i = 1; i < count; i++) {
+    term *= x / i;
+    result += term;
   }
-  return sum;
+  return result;
 }
 
 double sinn(double x, uint16_t count) {
