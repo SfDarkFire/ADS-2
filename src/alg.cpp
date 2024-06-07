@@ -10,7 +10,7 @@ double pown(double value, uint16_t n) {
   return value;
 }
 
-double fact(uint16_t n) {
+uint16_t fact(uint16_t n) {
   if (n == 0) {
     return 1;
   } else {
