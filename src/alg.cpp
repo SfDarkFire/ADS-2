@@ -34,7 +34,7 @@ double expn(double x, uint16_t count) {
 double sinn(double x, uint16_t count) {
 	double result = 0;
 	for (uint16_t n = 0; n < count; ++n) {
-		result += (std::pow(-1, n) / fact(2*n + 1)) * pown(x, 2*n + 1);
+		result += (pown(-1, n) / fact(2*n + 1)) * pown(x, 2*n + 1);
 	}
 	return result;
 }
@@ -42,7 +42,7 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
 	double result = 0;
 	for (uint16_t n = 0; n < count; ++n) {
-		result += (std::pow(-1, n) / fact(2*n)) * pown(x, 2*n);
+		result += (pown(-1, n) / fact(2*n)) * pown(x, 2*n);
 	}
 	return result;
 }
